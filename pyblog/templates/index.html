@@ -1,81 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+{% extends 'baseTemplate.html' %}
 
-    <title>Python Blog</title>
-    <link rel="shortcut icon" href="img/pyblog.svg" type="image/x-icon">
-</head>
-<body>
+{% load static %}
 
-    <!-- NAV -->
-
-    <nav class="navbar navbar-expand-lg" id="nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img src="img/pyblog.svg" alt="" width="60" height="48">
-            </a>       
-          <h1><a class="navbar-brand" href="index.html">PyBlog</a></h1>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">SOBRE NOSOTROS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages.html">POSTS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn" type="submit"><i class="bi bi-search busqueda"></i></button>
-            </form>
-            <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN</a>
-          </div>
-        </div>
-      </nav>
-
-    <!-- NAV END -->
-
-    <!-- Modal login -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="col-md-12">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Usuario</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-         </form>
-      </div>
-      <div class="modal-footer">
-        <a href="register.html"><button type="button" class="btn btn-link" data-bs-dismiss="modal">Registrarse</button></a>
-        <button type="button" class="btn btn-success">Login</button>
-      </div>
-    </div>
-  </div>
-</div>
+{% block variableContent %}
 
 
     <!-- HOME -->
@@ -102,7 +29,7 @@
 
                 <div class="card bg-dark text-white coder-ad">
                   <a href="https://www.coderhouse.com/" target="_blank">
-                    <img src="img/aside.jpg" class="card-img" alt="coder banner">
+                    <img src="{% static 'img/aside.jpg' %}" class="card-img" alt="coder banner">
                   </a>
                 </div>
                 <!-- CODER AD -->
@@ -117,20 +44,7 @@
   </div>
 <!-- HOME END -->
 
-    <!-- FOOTER -->
-    
-    <div class="footer container-fluid align-items-center" id="footer" style="max-height: 150px;">
-      <a href="" class="d-flex navbar-brand justify-content-center align-items-center" >
-        <img src="img/pyblog.svg" alt="logo pyblog">
-        <h2>Pyblog</h2>
-        <h5 style="color:white; font-size: 1em; margin-left:10px;">Copyright 2022</h5>
-      </a>
-    </div>
-  
-    <!-- FOOTER END -->
 
 
-     <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body>
-</html>
+
+{% endblock %}
