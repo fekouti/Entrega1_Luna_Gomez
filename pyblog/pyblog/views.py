@@ -15,8 +15,6 @@ def about(request):
 def faq(request):
     return render(request, 'faq.html', context={})
 
-def profile(request):
-    return render(request, 'profile.html', context={})
 
 def register(request):
     return render(request, 'register.html', context={})
