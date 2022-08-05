@@ -8,6 +8,9 @@ def profile(request):
 def allUsers(request):
     return render(request, 'users/all_users.html', context={})
 
+def reviews(request):
+    return render(request, 'reviews/reviews.html', context={})
+
 
 def list_posts(request):
     posts = Posts.objects.all()
@@ -24,6 +27,15 @@ def list_users(request):
         'users':users
     }
     return render(request, 'users/all_users.html', context=context)
+
+def list_users(request):
+    users = Users.objects.all()
+    print(len(users))
+    context = {
+        'users':users
+    }
+    return render(request, 'users/all_users.html', context=context)
+
 
 
 def new_post(request):
@@ -63,8 +75,28 @@ def register(request):
     return render(request, 'users/register.html', context={})
 
 
+def new_review(request):
+    print("hola")
+    if request.method == 'POST':
+        print("esto")
+        name= request.POST['name']
+        print("es")
+        stars= request.POST['stars']
+        print("una")
+        detailedReview= request.POST['detailedReview']
+        print("prueba")
+        
+        new_review = Reviews(name=name, stars=stars, detailedReview=detailedReview)
+        print("de")
+        new_review.save()
+        print("funcionamiento")
+    return render(request, 'reviews/new_review.html', context={})
+
+
 
 # Definir la vista de la clase
+
+
 
 
 # Definir la funcion que toma los datos del form

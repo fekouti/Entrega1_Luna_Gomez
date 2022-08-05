@@ -1,0 +1,77 @@
+{% extends 'baseTemplate.html' %}
+
+{% load static %}
+
+{% block variableContent %}
+
+    <!-- HOME -->
+<div id="home">
+
+    <div class="container-fluid last-posts">
+      <h3 class="recent-posts home-title">NUESTRAS REVIEWS</h3>
+      <a href="../new_review/" class="btn btn-success">+ DEJÁ TU OPINIÓN</a>
+      <div class="row">
+
+
+        <div class="col-md-8">
+          <div class="container d-flex">
+            <div class="row row-cols-1 row-cols-md-2 g-4" style="width: 100%;">
+              
+            
+
+                <!-- CARDS -->
+
+                {% for review in reviews %}
+
+       <div class="col">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-12">
+                <div class="card-body">
+                  <h5 class="card-title">{{review.name}}</h5>
+                  <p class="card-text"><small class="text-muted">Nos otorgó {{review.stars}} estrellas!</small></p>
+                  <p class="card-text">{{review.detailedReview}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+            <!-- CARDS END -->     
+
+      {% endfor %}
+
+
+      </div>
+    </div>    
+  </div>        
+  
+
+  
+        <!-- ASIDE -->
+
+
+        <div class="col-md-4" style="margin-top: 20px;">
+          <div class="container">
+
+
+                <!-- CODER AD -->
+
+                <div class="card bg-dark text-white coder-ad">
+                  <a href="https://www.coderhouse.com/" target="_blank">
+                    <img src="{% static 'img/aside.jpg' %}" class="card-img" alt="coder banner">
+                  </a>
+                </div>
+                <!-- CODER AD -->
+
+          </div>
+        </div>
+      
+      <!-- ASIDE END -->
+
+    </div>
+  </div>
+</div>
+<!-- HOME END -->
+
+{% endblock %}

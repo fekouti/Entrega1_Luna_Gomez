@@ -21,3 +21,8 @@ class Posts(models.Model):
 
 
 # Agregar una clase mas
+
+class Reviews(models.Model):
+    name = models.CharField(max_length=40)
+    stars = models.CharField(max_length=1)
+    detailedReview = models.CharField(max_length=240)
