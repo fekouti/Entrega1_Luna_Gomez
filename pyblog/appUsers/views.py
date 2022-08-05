@@ -61,3 +61,10 @@ def register(request):
         user.save()
         print("funcionamiento")
     return render(request, 'users/register.html', context={})
+
+
+
+# Definir la vista de la clase
+
+
+# Definir la funcion que toma los datos del form

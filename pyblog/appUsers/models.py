@@ -18,3 +18,6 @@ class Posts(models.Model):
     title = models.CharField(max_length=140, unique=True)
     subtitle = models.CharField(max_length=240)
     postContent = models.CharField(max_length=50000)
+
+
+# Agregar una clase mas
