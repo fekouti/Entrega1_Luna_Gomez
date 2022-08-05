@@ -4,9 +4,6 @@ from django.shortcuts import render
 
 
 def inicio(request):
-    return render(request, 'heritanceTest.html', context={})
-
-def index(request):
     return render(request, 'index.html', context={})
 
 def about(request):

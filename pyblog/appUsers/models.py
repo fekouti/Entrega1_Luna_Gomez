@@ -8,13 +8,13 @@ def __str__(self):
 
 
 class Users(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=40, unique=True)
     job = models.CharField(max_length=60)
-    email = models.CharField(max_length=35)
+    email = models.CharField(max_length=35, unique=True)
     password = models.CharField(max_length=12)
 
 
 class Posts(models.Model):
-    title = models.CharField(max_length=140)
+    title = models.CharField(max_length=140, unique=True)
     subtitle = models.CharField(max_length=240)
     postContent = models.CharField(max_length=50000)

@@ -120,3 +120,11 @@ h1 a{
 .profile-panel .row{
     margin-top: 25px;
 }
+
+
+.post-form{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: 1px solid grey;
+    border-radius: 16px;
+}
