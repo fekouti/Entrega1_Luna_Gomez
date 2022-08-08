@@ -16,4 +16,7 @@ urlpatterns = [
     # Path clase nueva 
     # Path form datos clase nueva
 
+    path('search_post/',searchPosts,name="search_post"),
+    path('search_post/',search ,name="search"),
+
 ]

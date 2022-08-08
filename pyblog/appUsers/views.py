@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from appUsers.models import *
+from django.http import HttpResponse
 
 # Create your views here.
 def profile(request):
@@ -100,3 +101,26 @@ def new_review(request):
 
 
 # Definir la funcion que toma los datos del form
+
+
+def searchPosts(request):
+    return render(request, "profile_posts/search_post.html",context={})
+
+
+def search(request):
+    if request.method == 'GET':
+        print("hola")
+        if request.GET['Search']:
+            print("hola")
+            post = request.GET['Search']
+            posts = Posts.objects.filter(title__icontains=post)
+            print("hola")
+            return render(request, "profile_posts/search_post.html", {"posts":posts , "post":post})
+
+        else:
+
+            response = "No se encontraron resultados"
+            print("hola")
+    else:
+        print("esto no se esta ejecutando")
+    return HttpResponse(response)
