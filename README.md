@@ -1,8 +1,6 @@
-# PyBlog--Proyecto-Final-
-
 # Primera Entrega
 
-
+### Fernando Luna y Fernando Gomez
 
 ## Requisitos:
 1. Herencia de templates
