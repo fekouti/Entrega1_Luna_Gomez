@@ -1,7 +1,9 @@
 # Primera Entrega
 
-### Fernando Luna y Fernando Gomez
-
+### Fernando Luna y Fernando Gomez <br>
+<br>
+_Este proyecto fue desarrollado en un entorno virtual con Django 4.0.6, puede que requieras instalarlo en tu computadora para poder visualizar nuestro trabajo de manera correcta._
+<br>
 ## Requisitos:
 1. Herencia de templates
 2. Por lo menos 3 clases en models.
